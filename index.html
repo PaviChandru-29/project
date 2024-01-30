@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fantasy Sports Platform</title>
+</head>
+<body>
+    <style>
+        img{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+    <header>
+        <h1>Fantasy Sports Platform</h1>
+        <!-- Include the navigation bar -->
+        <div id="navbar-container"></div>
+    </header>
+
+    <main>
+        <section id="football">
+            <h2>Football Fantasy</h2>
+            <img src="football2.jpg" alt="Football Image"
+            <h3>Players</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Position</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player 1</td>
+                        <td>Forward</td>
+                        <td>78</td>
+                    </tr>
+                    <tr>
+                        <td>Player 2</td>
+                        <td>Midfielder</td>
+                        <td>78</td>
+                    </tr>
+                    <!-- Add more players as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="basketball">
+            <h2>Basketball Fantasy</h2>
+            <img src="basketball (1).jpg" alt="Basketball Image" height="100px"; width="100px";>
+            <h3>Players</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Position</th>
+                        <th>Points per Game</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player A</td>
+                        <td>Guard</td>
+                        <td>20.5</td>
+                    </tr>
+                    <tr>
+                        <td>Player B</td>
+                        <td>Forward</td>
+                        <td>18.2</td>
+                    </tr>
+                    <!-- Add more players as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="baseball">
+            <h2>Baseball Fantasy</h2>
+            <img src="baseball (1).jpg" alt="Baseball Image">
+            <h3>Players</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Position</th>
+                        <th>Batting Average</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player X</td>
+                        <td>Outfielder</td>
+                        <td>0.300</td>
+                    </tr>
+                    <tr>
+                        <td>Player Y</td>
+                        <td>Infielder</td>
+                        <td>0.280</td>
+                    </tr>
+                    <!-- Add more players as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="soccer">
+            <h2>Soccer Fantasy</h2>
+            <img src="soccer .jpg" alt="Soccer Image">
+            <h3>Players</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Position</th>
+                        <th>Goals Scored</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player M</td>
+                        <td>Forward</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Player N</td>
+                        <td>Midfielder</td>
+                        <td>10</td>
+                    </tr>
+                    <!-- Add more players as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add more sports as needed -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fantasy Sports Platform | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Include the navigation bar script -->
+    <script>
+        // Load the navigation bar
+        const navbarContainer = document.getElementById('navbar-container');
+        const navbarRequest = new XMLHttpRequest();
+        navbarRequest.onload = function () {
+            if (navbarRequest.status === 200) {
+                navbarContainer.innerHTML = navbarRequest.responseText;
+            }
+        };
+        navbarRequest.open('GET', 'navbar.html', true);
+        navbarRequest.send();
+    </script>
+</body>
+</html>
